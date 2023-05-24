@@ -5,8 +5,8 @@ servers:
     url: https://dummyjson.com/
 info:
   version: "1.0.0"
-  title: Items
-  description: The API for all the items!
+  title: Products
+  description: The API for all the Products!
 paths:
   /products/:
     post:
@@ -35,7 +35,7 @@ paths:
             application/json:
               schema:
                 type: array
-                items:
+                products:
                   $ref: "#/components/schemas/Product"
 components:
   requestBodies:
@@ -65,7 +65,7 @@ components:
           example: 12.96
         images:
           type: array
-          items:
+          products:
             type: string
             example: "https://i.dummyjson.com/data/products/1/1.jpg"
         price:
