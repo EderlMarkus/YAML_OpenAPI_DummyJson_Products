@@ -1,0 +1,94 @@
+openapi: 3.0.0
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: Get dummy/fake JSON data to use as placeholder in development or in prototype testing.
+    url: https://dummyjson.com/
+info:
+  version: "1.0.0"
+  title: DummyJSON
+  description: The API for all the DummyJSON!
+paths:
+  /products/:
+    post:
+      tags:
+        - products
+      summary: Legt ein neues product an.
+      requestBody:
+        $ref: "./product.yaml#/components/requestBodies/product"
+      responses:
+        200:
+          description: Created
+  /products/{productId}:
+    get:
+      tags:
+        - products
+      summary: Liefert ein product anhand seiner ID zurück.
+      parameters:
+        - $ref: './product.yaml#/components/parameters/product'
+      responses:
+        200:
+          $ref: './product.yaml#/components/responses/product'
+    put:
+      tags:
+        - products
+      summary: Ändert ein product anhand seiner ID.
+      requestBody:
+        $ref: "./product.yaml#/components/requestBodies/product"
+      parameters:
+        - $ref: './product.yaml#/components/parameters/product'
+      responses:
+        200:
+          $ref: './product.yaml#/components/responses/product'
+    delete:
+      tags:
+        - products
+      summary: Löscht ein product anhand seiner ID.
+      parameters:
+        - $ref: './product.yaml#/components/parameters/product'
+      responses:
+        200:
+          $ref: './product.yaml#/components/responses/product'
+  /carts/:
+    post:
+      tags:
+        - Cart
+      summary: Legt ein neues Cart an.
+      requestBody:
+        $ref: "./cart.yaml#/components/requestBodies/cart"
+      responses:
+        200:
+          description: Created
+  /carts/{cartId}:
+    get:
+      tags:
+        - Cart
+      summary: Liefert ein product anhand seiner ID zurück.
+      parameters:
+        - $ref: './cart.yaml#/components/parameters/cart'
+      responses:
+        200:
+          $ref: './cart.yaml#/components/responses/cart'
+    put:
+      tags:
+        - Cart
+      summary: Ändert ein cart anhand seiner ID.
+      requestBody:
+        $ref: "./cart.yaml#/components/requestBodies/cart"
+      parameters:
+        - $ref: './cart.yaml#/components/parameters/cart'
+      responses:
+        200:
+          $ref: './cart.yaml#/components/responses/cart'
+    delete:
+      tags:
+        - Cart
+      summary: Löscht ein cart anhand seiner ID.
+      parameters:
+        - $ref: './cart.yaml#/components/parameters/cart'
+      responses:
+        200:
+          $ref: './cart.yaml#/components/responses/cart'
+components:
+  schemas:
+    $ref: "./cart.yaml#/components/schemas"
+    $ref: "./product.yaml#/components/schemas"

@@ -1,0 +1,63 @@
+components:
+  requestBodies:
+    product:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/product"
+  responses:
+    product:
+      description: Ok
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/product"
+  parameters:
+    product: 
+      name: "productId"
+      in: path
+      required: true
+      schema:
+      type: integer
+      minimum: 1
+      maximum: 30
+      description: the id of the product
+  schemas:
+    product:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        brand:
+          type: string
+          example: "Apple"
+        category:
+          type: string
+          example: "smartphones"
+        description:
+          type: string
+          example: "An apple mobile which is nothing like apple"
+        discountPercentage:
+          type: number
+          example: 12.96
+        images:
+          type: array
+          products:
+            type: string
+            example: "https://i.dummyjson.com/data/products/1/1.jpg"
+        price:
+          type: integer
+          example: 549
+        rating:
+          type: number
+          example: 4.69
+        stock:
+          type: integer
+          example: 94
+        thumbnail:
+          type: string
+          example: "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+        title:
+          type: string
+          example: "iPhone 9"

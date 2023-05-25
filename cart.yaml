@@ -1,0 +1,48 @@
+components:
+  requestBodies:
+    cart:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/cart"
+  responses:
+    cart:
+      description: Ok
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/cart"
+  parameters:
+    cart: 
+      name: "cartId"
+      in: path
+      required: true
+      schema:
+      type: integer
+      minimum: 1
+      maximum: 20
+      description: the id of the cart
+  schemas:
+    cart:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        products:
+          type: array
+          carts:
+            type: object
+            example: '{"id": 59,"title": "Spring and summershoes","price": 20,"quantity": 3,"total": 60,"discountPercentage": 8.71,"discountedPrice": 55}'
+        total:
+          type: integer
+          example: 2328
+        totalProducts:
+          type: integer
+          example: 5
+        totalQuantity:
+          type: integer
+          example: 10
+        userId: 
+          type: integer
+          example: 97
