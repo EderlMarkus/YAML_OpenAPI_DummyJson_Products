@@ -22,6 +22,21 @@ components:
       minimum: 1
       maximum: 30
       description: the id of the product
+    limit:
+      name: "limit"
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 30
+    select:
+      name: "select"
+      in: query
+      required: false
+      schema:
+        type: string
+        pattern: "^[a-zA-Z]+(?:,[a-zA-Z]+)*$"
   schemas:
     product:
       type: object

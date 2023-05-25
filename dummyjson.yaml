@@ -6,18 +6,38 @@ servers:
 info:
   version: "1.0.0"
   title: DummyJSON
-  description: The API for all the DummyJSON!
+  description: |
+    The API for all the DummyJSON!
+    
+    All Data comes from dummyjson.com
+    
+    ![dummyjson.png](https://dummyjson.com/)
 paths:
   /products/:
     post:
       tags:
         - products
       summary: Legt ein neues product an.
+      description: |
+        Mit dieser Operation wird ein neues **product** angelegt.
       requestBody:
         $ref: "./product.yaml#/components/requestBodies/product"
       responses:
         200:
           description: Created
+    get:
+      tags:
+        - products
+      summary: Liefert eine Liste von products zurück.
+      parameters:
+        - limit:
+          $ref: './product.yaml#/components/parameters/limit'
+        - select:
+          $ref: './product.yaml#/components/parameters/select'
+      responses:
+        200:
+          $ref: './product.yaml#/components/responses/product'
+
   /products/{productId}:
     get:
       tags:
