@@ -62,7 +62,7 @@ paths:
     get:
       tags:
         - Cart
-      summary: Liefert ein product anhand seiner ID zurück.
+      summary: Liefert ein Cart anhand seiner ID zurück.
       parameters:
         - $ref: './cart.yaml#/components/parameters/cart'
       responses:
@@ -90,5 +90,7 @@ paths:
           $ref: './cart.yaml#/components/responses/cart'
 components:
   schemas:
-    $ref: "./cart.yaml#/components/schemas"
-    $ref: "./product.yaml#/components/schemas"
+    cart:
+      $ref: "./cart.yaml#/components/schemas/cart"
+    product:
+      $ref: "./product.yaml#/components/schemas/product"
