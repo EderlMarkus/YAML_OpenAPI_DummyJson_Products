@@ -7,4 +7,4 @@ You can preview the
 <a target='_blank' href='https://ederlmarkus.github.io/YAML_OpenAPI_DummyJson_Products/'> generated Swagger-UI here.</a>
 
 <a target='_blank' href='swaggerUI.png'>
-<img src='swaggerUI.png' width="300px"/></a>
+<img src='./resources/swaggerUI.png' width="300px"/></a>
