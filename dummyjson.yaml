@@ -90,5 +90,7 @@ paths:
           $ref: './cart.yaml#/components/responses/cart'
 components:
   schemas:
-    $ref: "./cart.yaml#/components/schemas"
-    $ref: "./product.yaml#/components/schemas"
+    cart:
+      $ref: "./cart.yaml#/components/schemas/cart"
+    product:
+      $ref: "./product.yaml#/components/schemas/product"
