@@ -10,8 +10,9 @@ info:
     The API for all the DummyJSON!
     
     All Data comes from dummyjson.com
-    
-    ![dummyjson.png](https://dummyjson.com/)
+    <a href='https://dummyjson.com/'>
+    <img src='dummyjson.png' width=500/>
+    </a>
 paths:
   /products/:
     post:
