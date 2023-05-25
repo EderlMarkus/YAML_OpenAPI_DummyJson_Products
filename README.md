@@ -3,5 +3,8 @@
 A small example of how to use OpenAPI.
 https://www.openapis.org/what-is-openapi
 
-You can preview the generated Swagger-UI here:
-https://ederlmarkus.github.io/YAML_OpenAPI_DummyJson_Products/
+You can preview the
+<a target='_blank' href='https://ederlmarkus.github.io/YAML_OpenAPI_DummyJson_Products/'> generated Swagger-UI here.</a>
+
+<a target='_blank' href='swaggerUI.png'>
+<img src='swaggerUI.png' width="300px"/></a>
